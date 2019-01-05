@@ -10,9 +10,7 @@ Welcome to ST_InformationDisclosure's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-source/basic_info.rst
-
-Indices and tables
+   Basic Information   
 ==================
 
 * :ref:`genindex`
