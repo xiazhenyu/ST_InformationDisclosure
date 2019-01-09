@@ -8,13 +8,14 @@ Welcome to ST_InformationDisclosure's documentation!
 
 .. toctree::
    :maxdepth: 2
-   source/eip-st-draft01.rst
+   
    source/basic_infor.rst
    source/CryptocurrencyExchange.rst
    source/Profitability.rst
    source/Management.rst
    source/Litigation.rst
    source/Announcements.rst
+   source/eip-st-draft01.rst
    
 ==================
 

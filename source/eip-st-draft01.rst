@@ -1,6 +1,7 @@
----
+Interface Draft
+***********************
 
-eip: ERC-ST-D001
+eip: 
 title: Base on International Financial Reporting Standards to do information diclosure
 author: xiazy@weiresearch
 discussions-to: #
@@ -195,7 +196,8 @@ function isControllable() external view returns (bool);
 
 ## Interface
 
-``` solidity
+.. code::solidity
+
 /// @title International Financial Reporting Standards, information  (part of the ERC1400 Security Token Standards)
 /// @dev See https://github.com/SecurityTokenStandard/EIP-Spec
 /// Reference https://www.growthforce.com/blog/financial-reports-management-reports-differences
@@ -211,6 +213,7 @@ interface IERCxxxx is IERC20 {
     //      Accounts Receivable
     //      Statement of Cash Flows
 	function hasFinancialReport() external view returns (bool);
+	
 	//  Optional
 	//      Profit and Loss by Class  
 	//      Department
@@ -219,6 +222,7 @@ interface IERCxxxx is IERC20 {
     //      Realization Rate     
     //      Utilization Rate
 	function hasManagementReport() external view returns (bool);
+	
 	//  Optional 
 	//      pending
 	//      completed
@@ -250,8 +254,10 @@ interface IERCxxxx is IERC20 {
 	
 
 }
-```
+
+.. 
 
 ## References
 - [EIP 1400: Security Token Standard With Partitions](https://github.com/ethereum/EIPs/issues/1411)
 - [EIP Draft](https://github.com/SecurityTokenStandard/EIP-Spec)
+
