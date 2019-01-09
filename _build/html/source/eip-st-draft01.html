@@ -1,0 +1,379 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Interface Draft &mdash; ST_InformationDisclosure  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ST_InformationDisclosure
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Interface Draft</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ST_InformationDisclosure</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Interface Draft</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/eip-st-draft01.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="interface-draft">
+<h1>Interface Draft<a class="headerlink" href="#interface-draft" title="Permalink to this headline">¶</a></h1>
+<p>eip:
+title: Base on International Financial Reporting Standards to do information diclosure
+author: <a class="reference external" href="mailto:xiazy&#37;&#52;&#48;weiresearch">xiazy<span>&#64;</span>weiresearch</a>
+discussions-to: #
+status: Draft
+type: Standards Track
+category: ERC
+created: 2018-12-28
+require: None</p>
+<p>—</p>
+<p>## Simple Summary</p>
+<p>This standard sits under the ERC-1400 (#1411) umbrella set of standards related to security tokens.</p>
+<p>Provides a standard to support information disclosure on tokens.</p>
+<p>## Abstract</p>
+<p>Allows information of token issue entity information be disclosed for investers.</p>
+<p>## Motivation</p>
+<p>Since security tokens are subject to regulatory and legal oversight (the details of which will vary depending on jurisdiction, regulatory framework and underlying asset)</p>
+<p>Investors need a easy way to check financial report, management team, and litigation report of the company or the entity.</p>
+<p>## Requirements</p>
+<p>See ERC-1400 or ERC-20 for a full set of requirements across the library of standards.</p>
+<p>The following requirements have been compiled following discussions with parties across the Security Token ecosystem.</p>
+<ul class="simple">
+<li>MUST be able to perform forced transfer for legal action or fund recovery.</li>
+</ul>
+<p>## Rationale</p>
+<p>Investors can continue to check updated information on the issuer. The invested company or organization is obliged to disclose its true information in a timely manner.</p>
+<p>## Specification</p>
+<p>This standard will try to meet the legal information disclosure system in different countries.</p>
+<p>#### hasBasicInformation</p>
+<p>This function return false means no legal representive or organization register information available. return true means invoke function getBasicaInformation() will return related information</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">solidity</span>
+<span class="pre">function</span> <span class="pre">function</span> <span class="pre">hasBasicInformation()</span> <span class="pre">external</span> <span class="pre">view</span> <span class="pre">returns</span> <span class="pre">(bool)</span>
+<span class="pre">`</span></code></p>
+<p>#### hasFinancialReport</p>
+<p>This function return false means no financial report available. return true means invoke function getFinancialReport() will return related information</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">solidity</span>
+<span class="pre">function</span> <span class="pre">hasFinancialReport()</span> <span class="pre">external</span> <span class="pre">view</span> <span class="pre">returns</span> <span class="pre">(bool)</span>
+<span class="pre">`</span></code></p>
+<p>#### hasManagementReport</p>
+<p>This function return false means no management report available. return true means invoke function getManagementReport() will return related information</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">solidity</span>
+<span class="pre">function</span> <span class="pre">hasManagementReport()</span> <span class="pre">external</span> <span class="pre">view</span> <span class="pre">returns</span> <span class="pre">(bool)</span>
+<span class="pre">`</span></code></p>
+<p>#### hasLitigationDisclosure</p>
+<p>This function return false means no litigation information available. return true means invoke function getLitigationReport() will return related information</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">solidity</span>
+<span class="pre">function</span> <span class="pre">getLitigationReport()</span> <span class="pre">external</span> <span class="pre">view</span> <span class="pre">returns</span> <span class="pre">(bool)</span>
+<span class="pre">`</span></code></p>
+<p>#### hasLitigationDisclosure</p>
+<p>This function return false means no litigation information available. return true means invoke function getLitigationReport() will return related information</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">solidity</span>
+<span class="pre">function</span> <span class="pre">getLitigationReport()</span> <span class="pre">external</span> <span class="pre">view</span> <span class="pre">returns</span> <span class="pre">(bool)</span>
+<span class="pre">`</span></code></p>
+<p>#### hasLitigationDisclosure</p>
+<p>This function return false means no litigation information available. return true means invoke function getLitigationReport() will return related information</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">solidity</span>
+<span class="pre">function</span> <span class="pre">getLitigationReport()</span> <span class="pre">external</span> <span class="pre">view</span> <span class="pre">returns</span> <span class="pre">(bool)</span>
+<span class="pre">`</span></code></p>
+<p>#### setBasicaInformation</p>
+<p>Used to attach a organization document the contract, or update the URI or hash of an existing attached document.</p>
+<p>setBasicaInformation MUST throw if the document is not successfully stored.</p>
+<p>setBasicaInformation MUST emit a DocumentUpdated event with details of the document being attached or modified.</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">solidity</span>
+<span class="pre">function</span> <span class="pre">setBasicaInformation(bytes32</span> <span class="pre">_name,</span> <span class="pre">string</span> <span class="pre">_uri,</span> <span class="pre">bytes32</span> <span class="pre">_documentHash)</span> <span class="pre">external;</span>
+<span class="pre">`</span></code></p>
+<p>#### getBasicaInformation</p>
+<p>Used to return the details of a document with a known name (bytes32). Returns the URI associated with the document (string), the hash (of the contents) of the document (bytes32), and the timestamp at which the document was last modified via setFinancialReport (uint256).</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">solidity</span>
+<span class="pre">function</span> <span class="pre">getBasicaInformation(bytes32</span> <span class="pre">_name,</span> <span class="pre">string</span> <span class="pre">_uri,</span> <span class="pre">bytes32</span> <span class="pre">_documentHash)</span> <span class="pre">external;</span>
+<span class="pre">`</span></code></p>
+<p>#### setFinancialReport</p>
+<p>Used to attach a new financial report to the contract, or update the URI or hash of an existing attached document.</p>
+<p>setFinancialReport MUST throw if the document is not successfully stored.</p>
+<p>setFinancialReport MUST emit a DocumentUpdated event with details of the document being attached or modified.</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">solidity</span>
+<span class="pre">function</span> <span class="pre">setFinancialReport(bytes32</span> <span class="pre">_name,</span> <span class="pre">string</span> <span class="pre">_uri,</span> <span class="pre">bytes32</span> <span class="pre">_documentHash)</span> <span class="pre">external;</span>
+<span class="pre">`</span></code></p>
+<p>#### getFinancialReport</p>
+<p>Used to return the details of a document with a known name (bytes32). Returns the URI associated with the document (string), the hash (of the contents) of the document (bytes32), and the timestamp at which the document was last modified via setFinancialReport (uint256).</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">solidity</span>
+<span class="pre">function</span> <span class="pre">getFinancialReport(bytes32</span> <span class="pre">_name,</span> <span class="pre">string</span> <span class="pre">_uri,</span> <span class="pre">bytes32</span> <span class="pre">_documentHash)</span> <span class="pre">external;</span>
+<span class="pre">`</span></code></p>
+<p>#### setManagementReport</p>
+<p>Used to attach a new management report to the contract, or update the URI or hash of an existing attached document.</p>
+<p>setManagementReport MUST throw if the document is not successfully stored.</p>
+<p>setManagementReport MUST emit a DocumentUpdated event with details of the document being attached or modified.</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">solidity</span>
+<span class="pre">function</span> <span class="pre">setManagementReport(bytes32</span> <span class="pre">_name,</span> <span class="pre">string</span> <span class="pre">_uri,</span> <span class="pre">bytes32</span> <span class="pre">_documentHash)</span> <span class="pre">external;</span>
+<span class="pre">`</span></code></p>
+<p>#### getManagementReport</p>
+<p>Used to return the details of a document with a known name (bytes32). Returns the URI associated with the document (string), the hash (of the contents) of the document (bytes32), and the timestamp at which the document was last modified via setManagementReport (uint256).</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">solidity</span>
+<span class="pre">function</span> <span class="pre">ManagementReport(bytes32</span> <span class="pre">_name,</span> <span class="pre">string</span> <span class="pre">_uri,</span> <span class="pre">bytes32</span> <span class="pre">_documentHash)</span> <span class="pre">external;</span>
+<span class="pre">`</span></code></p>
+<p>#### setLitigationReport</p>
+<p>Used to attach a new  iltigation report to the contract, or update the URI or hash of an existing attached document.</p>
+<p>LitigationReport MUST throw if the document is not successfully stored.</p>
+<p>LitigationReport MUST emit a DocumentUpdated event with details of the document being attached or modified.</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">solidity</span>
+<span class="pre">function</span> <span class="pre">LitigationReport(bytes32</span> <span class="pre">_name,</span> <span class="pre">string</span> <span class="pre">_uri,</span> <span class="pre">bytes32</span> <span class="pre">_documentHash)</span> <span class="pre">external;</span>
+<span class="pre">`</span></code></p>
+<p>#### getLitigationReport</p>
+<p>Used to return the details of a document with a known name (bytes32). Returns the URI associated with the document (string), the hash (of the contents) of the document (bytes32), and the timestamp at which the document was last modified via setFinancialReport (uint256).</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">solidity</span>
+<span class="pre">function</span> <span class="pre">getLitigationReport(bytes32</span> <span class="pre">_name,</span> <span class="pre">string</span> <span class="pre">_uri,</span> <span class="pre">bytes32</span> <span class="pre">_documentHash)</span> <span class="pre">external;</span>
+<span class="pre">`</span></code></p>
+<p>#### isControllable</p>
+<p>In order to provide transparency over whether <cite>controllerTransfer</cite> / <cite>controllerRedeem</cite> are useable, the function <cite>isControllable</cite> can be used.</p>
+<dl class="docutils">
+<dt>If a token returns FALSE for <cite>isControllable()</cite> then it MUST:</dt>
+<dd><ul class="first last simple">
+<li>always return FALSE in the future.</li>
+<li><cite>controllerTransfer</cite> must revert</li>
+<li><cite>controllerRedeem</cite> must revert</li>
+</ul>
+</dd>
+</dl>
+<p>In other words, if an issuer sets <cite>isControllable</cite> to return FALSE, then there can be no further controller transactions for this token contract.
+<cite>controllerRedeem</cite> MUST emit a <cite>ControllerRedemption</cite> event.
+<code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">solidity</span>
+<span class="pre">function</span> <span class="pre">isControllable()</span> <span class="pre">external</span> <span class="pre">view</span> <span class="pre">returns</span> <span class="pre">(bool);</span>
+<span class="pre">`</span></code></p>
+<p>## Interface</p>
+<p>/// &#64;title International Financial Reporting Standards, information  (part of the ERC1400 Security Token Standards)
+/// &#64;dev See <a class="reference external" href="https://github.com/SecurityTokenStandard/EIP-Spec">https://github.com/SecurityTokenStandard/EIP-Spec</a>
+/// Reference <a class="reference external" href="https://www.growthforce.com/blog/financial-reports-management-reports-differences">https://www.growthforce.com/blog/financial-reports-management-reports-differences</a></p>
+<p>interface IERCxxxx is IERC20 {</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>// Regular Operation</dt>
+<dd><p class="first">function hasBasicInformation() external view returns (bool);</p>
+<p class="last">//      Profit and Loss Statement</p>
+</dd>
+</dl>
+<p>//      Balance Sheet
+//      Accounts Payable
+//      Accounts Receivable
+//      Statement of Cash Flows</p>
+<blockquote>
+<div><p>function hasFinancialReport() external view returns (bool);</p>
+<p>//  Optional
+//      Profit and Loss by Class
+//      Department</p>
+</div></blockquote>
+<p>//       Team
+//       Job
+//      Realization Rate
+//      Utilization Rate</p>
+<blockquote>
+<div><p>function hasManagementReport() external view returns (bool);</p>
+<p>//  Optional
+//      pending
+//      completed
+function hasLitigationDisclosure() external view returns (bool);</p>
+<p>function setBasicaInformation(bytes32 _name, string _uri, bytes32 _documentHash) external;</p>
+</div></blockquote>
+<p>// Document Management
+function getBasicaInformation(bytes32 _name) external view returns (string, bytes32, uint256);</p>
+<blockquote>
+<div>function setBasicaInformation(bytes32 _name, string _uri, bytes32 _documentHash) external;</div></blockquote>
+<p>// Document Management
+function getBasicaInformation(bytes32 _name) external view returns (string, bytes32, uint256);</p>
+<blockquote>
+<div>function setFinancialReport(bytes32 _name, string _uri, bytes32 _documentHash) external;</div></blockquote>
+<p>// Document Management
+function getFinancialReport(bytes32 _name) external view returns (string, bytes32, uint256);</p>
+<blockquote>
+<div>function setManagementReport(bytes32 _name, string _uri, bytes32 _documentHash) external;</div></blockquote>
+<p>// Document Management
+function getManagementReport(bytes32 _name) external view returns (string, bytes32, uint256);</p>
+<blockquote>
+<div>function setLitigationReport(bytes32 _name, string _uri, bytes32 _documentHash) external;</div></blockquote>
+<p>// Document Management
+function getLitigationReport(bytes32 _name) external view returns (string, bytes32, uint256);</p>
+</div></blockquote>
+<p>}</p>
+<p>## References
+- [EIP 1400: Security Token Standard With Partitions](<a class="reference external" href="https://github.com/ethereum/EIPs/issues/1411">https://github.com/ethereum/EIPs/issues/1411</a>)
+- [EIP Draft](<a class="reference external" href="https://github.com/SecurityTokenStandard/EIP-Spec">https://github.com/SecurityTokenStandard/EIP-Spec</a>)</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, xiazy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
